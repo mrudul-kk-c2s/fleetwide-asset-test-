@@ -1,1 +1,1 @@
-public asset v1
+public asset v2
