@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    location = /var {
+        default_type text/plain;
+        return 200 "TEST_VAR=${TEST_VAR} FLEET_ONLY=${FLEET_ONLY}\n";
+    }
+    location / {
+        root /usr/share/nginx/html;
+    }
+}
