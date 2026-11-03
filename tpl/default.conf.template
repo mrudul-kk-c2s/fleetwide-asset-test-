@@ -1,5 +1,7 @@
 server {
     listen 80;
+    set $test_var "(unset)";
+    set $fleet_only "(unset)";
     location = /var {
         default_type text/plain;
         return 200 "TEST_VAR=${TEST_VAR} FLEET_ONLY=${FLEET_ONLY}\n";
